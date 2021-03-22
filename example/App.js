@@ -8,20 +8,20 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import ProofConceptLibrary from 'react-native-proof-concept-library';
 
 export default class App extends Component<{}> {
   state = {
     status: 'starting',
-    message: '--'
+    message: '--',
   };
   componentDidMount() {
-    ProofConceptLibrary.sampleMethod('Testing', 123, (message) => {
+    ProofConceptLibrary.sampleMethod('Testing', 123, message => {
       this.setState({
         status: 'native callback received',
-        message
+        message,
       });
     });
   }
