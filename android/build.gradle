@@ -66,6 +66,9 @@ repositories {
         // Android JSC is installed from npm
         url "$rootDir/../node_modules/jsc-android/dist"
     }
+    maven { 
+        url 'https://jitpack.io'
+    }	
     google()
 }
 
@@ -145,4 +148,10 @@ afterEvaluate { project ->
             configureReactNativePom pom
         }
     }
+}
+
+
+dependencies {
+  // noinspection GradleDynamicVersion
+  implementation 'com.github.HBiSoft:HBRecorder:0.1.13'
 }
